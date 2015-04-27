@@ -18,7 +18,6 @@ f7608712f5a0a4e98dc77feba3731968 9e8e2a294686893260b5cd99cd281288 ./external/blu
 40d0190c563dcafd863e22c5eb3b0c94 940a34eb10cb8d58b67e5684c45e9de5 ./external/bluetooth/bluedroid/main/Android.mk
 58c05b53de6c3798500d0054e01ea191 4ad91932c0f2fc326c1afa88b37e3d5c ./frameworks/base/services/core/java/com/android/server/MountService.java
 c3dada889637034162e837b8f9514df4 60f7b16fd21988e77e6de65e5b5f7cdf ./frameworks/base/services/core/java/com/android/server/am/ProcessList.java
-c645067edb9828c01cdf14c68450b82b a55a507c11bb7c7115d37a060f85420f ./frameworks/base/services/core/java/com/android/server/display/AutomaticBrightnessController.java
 b175965d838aa6e2982b9b6a2fc3a48b 2682b7f16325d5fbce93f0f1cc71b625 ./frameworks/base/services/core/java/com/android/server/display/DisplayPowerController.java
 419a8e724e9bc23ebfc4701191b79500 41d2237f0d888f3cbcc5595d9d50e547 ./frameworks/base/services/core/java/com/android/server/display/DisplayPowerState.java
 d8f0614f8841e2c694dcb434cbdb21f3 f7052b832d203616632c159079f16dbc ./frameworks/base/services/core/java/com/android/server/lights/LightsManager.java
