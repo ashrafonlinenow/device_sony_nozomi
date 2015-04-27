@@ -39,7 +39,7 @@ ecc8e7c360976ac26e0ddf20a01ad651 da456ab876c2db35ed9e0f3b2557d38d ./hardware/lib
 780f48038ff8adb4529169586bf7afec b1c9c69b40b974b921e8513f32af533d ./hardware/libhardware/include/hardware/bt_rc.h
 2b0f72f3ce5e73189fe4269ab93a13b7 1b0edd5fb56139cccbed4e64d76f53fb ./hardware/libhardware/include/hardware/bt_sock.h
 -------------------------------- 2f20f20c2d1dfddb2c38200ea2a91526 ./hardware/libhardware/include/hardware/fmradio.h
-3300154e147fd5d2fc863960a4922eb7 ea6e2b64c00be25ae687bf5430c5175a ./hardware/libhardware_legacy/audio/AudioPolicyManagerBase.cpp
+3300154e147fd5d2fc863960a4922eb7 df55f9939d769c5de7d59f6fb55918ed ./hardware/libhardware_legacy/audio/AudioPolicyManagerBase.cpp
 6e7cdb6df6767471584602616cb88f75 2ef84912787214995bd23d907aa85866 ./packages/apps/Camera2/AndroidManifest.xml
 -------------------------------- 9fc38b6b09859cd7ae345ead73e431ab ./packages/apps/Camera2/src/com/android/camera/CameraButtonIntentReceiver.java
 24f45c1327d6a18dabb3c7548f3a124b 8bf73b764b40ed826123b13f1b51c47b ./packages/apps/Email/emailcommon/src/com/android/emailcommon/provider/Policy.java
