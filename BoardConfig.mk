@@ -142,6 +142,10 @@ TW_CUSTOM_CPU_TEMP_PATH := "/sys/devices/platform/msm_adc/msm_therm"
 endif #TARGET_RECOVERY_TWRP
 endif #TARGET_NO_RECOVERY
 
+# hybris boot
+HYBRIS_BOOT_PART := /dev/block/mmcblk0p3
+HYBRIS_DATA_PART := /dev/block/mmcblk0p14
+
 # OTA
 TARGET_OTA_ASSERT_DEVICE := LT26i,nozomi
 
