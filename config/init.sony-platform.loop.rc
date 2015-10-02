@@ -280,7 +280,6 @@ service hw_config /system/bin/sh /system/etc/hw_config.sh
     class main
     user root
     oneshot
-    seclabel u:r:init:s0
 
 service updatemiscta /system/bin/updatemiscta
     class main
