@@ -68,7 +68,8 @@ PRODUCT_PACKAGES += \
 # Stlport for proprietary Adreno OpenGL lib
 PRODUCT_PACKAGES +=  \
     libstlport \
-    libCrypto
+    libCrypto \
+    libxgril-shim
 
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:system/etc/media_codecs_google_audio.xml \
@@ -293,3 +294,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
+
