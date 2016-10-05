@@ -54,7 +54,8 @@ persist.sys.qs_onefinger=true
 # Notify the system that the RIL only signals once
 ro.telephony.call_ring.multiple=false
 
-rild.libpath=/system/lib/libril-qc-qmi-1.so
+#rild.libpath=/system/lib/libril-qc-qmi-1.so
+rild.libpath=/system/lib/libxgril-shim.so
 rild.libargs=-d /dev/smd0
 persist.rild.nitz_plmn=
 persist.rild.nitz_long_ons_0=
