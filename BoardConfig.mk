@@ -32,6 +32,9 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 # legacy
 TARGET_LEGACY_BLOB_COMPATIBLE := true
 
+# Binder API
+TARGET_USES_64_BIT_BINDER := true
+
 # malloc
 MALLOC_SVELTE := true
 
