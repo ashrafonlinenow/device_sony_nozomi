@@ -104,6 +104,9 @@ TARGET_BOOTLOADER_BOARD_NAME := fuji
 TARGET_VENDOR_PLATFORM := fuji
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
 
+# SHIM
+TARGET_LD_SHIM_LIBS := /system/lib/libcald_pal.so|libshim_cald.so:/system/lib/libMPU3050.so|libshim_cald.so:/system/lib/hw/camera.vendor.msm8660.so|libshim_camera.so
+
 # charger/healthd
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
