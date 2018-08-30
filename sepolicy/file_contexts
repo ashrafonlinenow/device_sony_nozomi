@@ -112,7 +112,6 @@
 /system/bin/iddd                   u:object_r:iddd_exec:s0
 /system/bin/idd-logreader          u:object_r:iddd_exec:s0
 /system/bin/suntrold               u:object_r:suntrold_exec:s0
-/system/bin/fast-dormancy          u:object_r:fast-dormancy_exec:s0
 /system/bin/updatemiscta           u:object_r:updatemiscta_exec:s0
 /system/bin/nvimport               u:object_r:nvimport_exec:s0
 /system/bin/touchd                 u:object_r:touchd_exec:s0

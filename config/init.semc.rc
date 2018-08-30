@@ -625,15 +625,6 @@ service suntrold /system/bin/suntrold
     group system
     oneshot
 
-# Fast Dormancy
-service fast-dormancy /system/bin/fast-dormancy
-    class main
-    user root
-    group root inet net_raw net_admin
-
-on property:ro.semc.enable.fast_dormancy=false
-    stop fast-dormancy
-
 service secchan /system/bin/secchand
     class main
     user system
