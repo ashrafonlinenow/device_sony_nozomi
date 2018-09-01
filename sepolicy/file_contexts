@@ -17,9 +17,6 @@
 
 /dev/diag                              u:object_r:diag_device:s0
 
-# CPU governor controls
-/dev/socket/mpdecision(/.*)?           u:object_r:mpdecision_socket:s0
-
 # Qualcomm MSM Audio devices
 /dev/msm_acdb                      u:object_r:audio_device:s0
 /dev/msm_mp3                       u:object_r:audio_device:s0
@@ -125,7 +122,6 @@
 /system/bin/chargemon              u:object_r:chargemon_exec:s0
 /system/bin/usbeng                 u:object_r:usbeng_exec:s0
 /system/bin/cal_data_manager       u:object_r:cal_data_manager_exec:s0
-/system/bin/mpdecision             u:object_r:mpdecision_exec:s0
 
 #/data
 /data/camera(/.*)?                 u:object_r:camera_data_file:s0
@@ -166,10 +162,6 @@
 
 # fast charge
 /sys/kernel/fast_charge/force_fast_charge  --  u:object_r:sysfs_fastcharge:s0
-
-# mpdecision
-/sys/module/pm2/modes(/.*)?            u:object_r:sysfs_mpdecision:s0
-/sys/module/pm_8x60/modes(/.*)?        u:object_r:sysfs_mpdecision:s0
 
 # camera
 /sys/devices/i2c-3/3-0053/flash_.*      u:object_r:sysfs_camera:s0
