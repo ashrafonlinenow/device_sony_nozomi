@@ -1,0 +1,4 @@
+allow hal_graphics_allocator_default graphics_device:chr_file { ioctl open read };
+allow hal_graphics_allocator_default graphics_device:dir search;
+#allow hal_graphics_allocator_default shell_data_file:dir search;
+

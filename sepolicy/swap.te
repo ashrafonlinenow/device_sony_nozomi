@@ -5,3 +5,11 @@ type swap_exec, exec_type, file_type;
 # Started by init
 init_daemon_domain(swap)
 
+allow swap block_device:dir search;
+allow swap rootfs:file { open read };
+allow swap self:capability sys_admin;
+allow swap shell_exec:file { entrypoint getattr read };
+allow swap swap_block_device:blk_file { getattr open read write };
+allow swap sysfs:file { getattr open read write };
+allow swap system_file:file execute_no_trans;
+allow swap toolbox_exec:file { execute execute_no_trans getattr open read };

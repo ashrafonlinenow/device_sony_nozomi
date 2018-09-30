@@ -5,3 +5,10 @@ type tad_exec, exec_type, file_type;
 # Started by init
 init_daemon_domain(tad)
 
+allow tad block_device:dir search;
+allow tad proc:file { open read };
+allow tad self:capability dac_override;
+allow tad system_file:file execmod;
+allow tad tad_block_device:blk_file { ioctl open read write };
+allow tad tad_exec:file execmod;
+allow tad tad_socket:sock_file write;

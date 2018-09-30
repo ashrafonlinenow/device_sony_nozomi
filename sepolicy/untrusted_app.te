@@ -1,0 +1,9 @@
+allow untrusted_app proc_tty_drivers:file r_file_perms;
+allow untrusted_app proc_vmstat:file r_file_perms;
+allow untrusted_app selinuxfs:file r_file_perms;
+allow untrusted_app su_device:dir search;
+allow untrusted_app su_device:sock_file write;
+allow untrusted_app su_exec:file rx_file_perms;
+allow untrusted_app sysfs:dir { open read };
+allow untrusted_app sysfs_devices_system_cpu:file r_file_perms;
+allow untrusted_app sysfs_gpuclk:file r_file_perms;

@@ -1,0 +1,15 @@
+set_prop(mediaserver, camera_prop);
+
+allow mediaserver camera_data_file:dir { search write add_name };
+allow mediaserver camera_data_file:file { getattr open read write };
+allow mediaserver diag_device:chr_file { open read write };
+allow mediaserver idd_data_file:dir search;
+allow mediaserver idd_data_file:sock_file write;
+allow mediaserver iddd:unix_dgram_socket sendto;
+allow mediaserver radio_device:chr_file { ioctl open read write };
+allow mediaserver sensorservice_service:service_manager find;
+allow mediaserver sysfs_camera:file { open read write };
+allow mediaserver system_data_file:lnk_file read;
+allow mediaserver system_file:file execmod;
+allow mediaserver system_server:unix_stream_socket { read write };
+

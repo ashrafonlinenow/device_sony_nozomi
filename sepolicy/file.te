@@ -16,8 +16,13 @@ type sysfs_mdp, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_fastcharge, fs_type, sysfs_type, mlstrustedobject;
 type sysfs_camera, fs_type, sysfs_type;
 type sysfs_jack, fs_type, sysfs_type, mlstrustedobject;
+type sysfs_gpuclk, fs_type, sysfs_type;
+type sysfs_surfaceflinger, fs_type, sysfs_type;
 
 # data_file
 type idd_data_file, file_type, data_file_type;
 type etc_data_file, file_type, data_file_type;
+
+# proc
+type proc_vmstat, fs_type;
 

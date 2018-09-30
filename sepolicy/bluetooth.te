@@ -1,0 +1,5 @@
+allow bluetooth etc_data_file:dir search;
+allow bluetooth etc_data_file:file { open read };
+allow bluetooth proc:file { open write };
+allow bluetooth sysfs:file write;
+

@@ -5,3 +5,12 @@ type updatemiscta_exec, exec_type, file_type;
 # Started by init
 init_daemon_domain(updatemiscta)
 
+set_prop(updatemiscta, tareset_notfirstboot_prop);
+
+allow updatemiscta init:unix_stream_socket connectto;
+allow updatemiscta property_socket:sock_file write;
+allow updatemiscta self:capability dac_override;
+allow updatemiscta system_file:file execmod;
+allow updatemiscta tad:unix_stream_socket connectto;
+allow updatemiscta tad_socket:sock_file write;
+allow updatemiscta updatemiscta_exec:file execmod;

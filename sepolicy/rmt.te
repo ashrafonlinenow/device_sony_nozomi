@@ -5,3 +5,9 @@ type rmt_exec, exec_type, file_type;
 # Started by init
 init_daemon_domain(rmt)
 
+allow rmt block_device:dir search;
+allow rmt rmt_block_device:blk_file { open read write };
+allow rmt rmt_device:chr_file { ioctl open read write };
+allow rmt rmt_exec:file execmod;
+allow rmt root_block_device:blk_file { open read };
+allow rmt self:capability { dac_override setgid setuid };

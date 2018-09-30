@@ -5,3 +5,12 @@ type qmux_exec, exec_type, file_type;
 # Started by init
 init_daemon_domain(qmux)
 
+allow qmux diag_device:chr_file { open read write };
+allow qmux qmux_exec:file execmod;
+allow qmux qmuxd_socket:dir { add_name remove_name search write };
+allow qmux qmuxd_socket:sock_file { create getattr setattr unlink };
+allow qmux radio_device:chr_file { ioctl open read write };
+allow qmux sysfs:file { append getattr open read };
+allow qmux sysfs_radio:file { open write };
+allow qmux sysfs_wake_lock:file { append open };
+allow qmux system_file:file execmod;

@@ -1,1 +1,5 @@
 ctl.rmt            u:object_r:ctl_rmt_prop:s0
+camera.0.          u:object_r:camera_prop:s0
+camera.1.          u:object_r:camera_prop:s0
+ro.hsdpa_cat       u:object_r:hsdpa_cat_prop:s0
+persist.tareset.notfirstboot    u:object_r:tareset_notfirstboot_prop:s0
