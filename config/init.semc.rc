@@ -56,9 +56,22 @@ on init
 
 on fs
     # mount mmc partitions
-    mount_all fstab.semc
+    mount_all fstab.semc --early
 
     setprop ro.emmc 1
+
+    # Start HW service manager early
+    start hwservicemanager
+
+
+on late-fs
+    # Start services for bootanim
+    start surfaceflinger
+    start bootanim
+    start configstore-hal-1-0
+    start gralloc-2-0
+    mount_all fstab.semc --late
+
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
