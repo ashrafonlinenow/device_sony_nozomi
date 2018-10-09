@@ -356,6 +356,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     net.tethering.noprovisioning=true \
     persist.sys.dun.override=0
 
+# skip setup wizard
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.setupwizard.mode=DISABLED
+
 # Backup Tool
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/custom/backuptool/backuptool.sh:install/bin/backuptool.sh \
