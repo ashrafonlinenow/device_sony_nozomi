@@ -1,1 +1,4 @@
 type ctl_rmt_prop, property_type;
+type camera_prop, property_type;
+type hsdpa_cat_prop, property_type;
+type tareset_notfirstboot_prop, property_type;

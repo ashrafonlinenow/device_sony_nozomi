@@ -1,0 +1,1 @@
+genfscon proc /vmstat      u:object_r:proc_vmstat:s0

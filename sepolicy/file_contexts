@@ -172,3 +172,28 @@
 # jack detection
 /sys/devices/platform/msm_ssbi.0/pm8058-core/simple_remote_pf/simple_remote/det_.*  u:object_r:sysfs_jack:s0
 
+# debugfs
+/sys/kernel(/debug)?/tracing/trace_marker                       u:object_r:debugfs_trace_marker:s0
+/sys/kernel/debug/mmc0(/.*)?                                    u:object_r:debugfs_mmc:s0
+
+/sys/devices/system/cpu(/.*)?                             --    u:object_r:sysfs_devices_system_cpu:s0
+
+/dev/android_adb(/.*)?                                          u:object_r:adb_device:s0
+
+/sys/devices/platform/kgsl-3d0\.0/kgsl/kgsl-3d0/gpuclk          u:object_r:sysfs_gpuclk:s0
+/sys/devices/platform/kgsl-3d0\.0/kgsl/kgsl-3d0/max_gpuclk      u:object_r:sysfs_gpuclk:s0
+
+/sys/devices/virtual/graphics/fb([0-2])+/hpd                    u:object_r:sysfs_surfaceflinger:s0
+/sys/devices/virtual/graphics/fb([0-2])+/vendor_name            u:object_r:sysfs_surfaceflinger:s0
+/sys/devices/virtual/graphics/fb([0-2])+/product_description    u:object_r:sysfs_surfaceflinger:s0
+
+/sys/module/lowmemorykiller(/.*)?                         --    u:object_r:sysfs_lowmemorykiller:s0
+
+/sys/power/wake_lock                                      --    u:object_r:sysfs_wake_lock:s0
+/sys/power/wake_unlock                                    --    u:object_r:sysfs_wake_lock:s0
+
+/dev/mpu                                                        u:object_r:sensors_device:s0
+/dev/mpuirq                                                     u:object_r:sensors_device:s0
+
+/sys/module/bcmdhd/parameters/firmware_path                     u:object_r:sysfs_wlan_fwpath:s0
+

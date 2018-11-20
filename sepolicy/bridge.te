@@ -5,3 +5,13 @@ type bridge_exec, exec_type, file_type;
 # Started by init
 init_daemon_domain(bridge)
 
+allow bridge bridge_exec:file execmod;
+allow bridge diag_device:chr_file { getattr ioctl open read write };
+allow bridge qmux:unix_stream_socket connectto;
+allow bridge qmuxd_socket:dir { add_name remove_name search write };
+allow bridge qmuxd_socket:sock_file { create setattr unlink write };
+allow bridge radio_device:chr_file { ioctl open read write };
+allow bridge self:netlink_kobject_uevent_socket { bind create read };
+allow bridge sysfs:file { open read };
+allow bridge sysfs_rmnet:file write;
+allow bridge system_file:file execmod;

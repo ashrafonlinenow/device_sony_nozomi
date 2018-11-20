@@ -1,0 +1,5 @@
+allow init debugfs:file write;
+allow init idd_data_file:filesystem { mount relabelfrom relabelto unmount };
+allow init su:process { noatsecure rlimitinh siginh transition };
+allow init su_exec:file { execute getattr open read };
+allow init tmpfs:lnk_file create;

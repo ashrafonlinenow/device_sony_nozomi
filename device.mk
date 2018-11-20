@@ -215,7 +215,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/config/init.semc.usb.rc:root/init.semc.usb.rc
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/config/fstab.dynamic.semc:root/fstab.semc
+    $(LOCAL_PATH)/config/fstab.semc:root/fstab.semc
 
 # Recovery: Custom init for twrp
 ifeq ($(TARGET_RECOVERY_TWRP),true)
@@ -233,6 +233,14 @@ PRODUCT_PACKAGES += \
 # Fm radio
 PRODUCT_PACKAGES += \
     FMRadio
+
+# Jelly Browser
+PRODUCT_PACKAGES += \
+    Jelly
+
+# Eleven music app
+PRODUCT_PACKAGES += \
+    Eleven
 
 # Key layouts and touchscreen
 PRODUCT_COPY_FILES += \
@@ -333,7 +341,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.dex2oat-swap=false
+    dalvik.vm.dex2oat-swap=false \
+    dalvik.vm.heapstartsize=8m \
+    dalvik.vm.heapgrowthlimit=192m \
+    dalvik.vm.heapsize=256m \
+    dalvik.vm.heaptargetutilization=0.75 \
+    dalvik.vm.heapminfree=512k \
+    dalvik.vm.heapmaxfree=8m
 
 PRODUCT_TAGS += dalvik.gc.type-precise
 
@@ -342,7 +356,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     net.tethering.noprovisioning=true \
     persist.sys.dun.override=0
 
-$(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
+# skip setup wizard
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.setupwizard.mode=DISABLED
 
 # Backup Tool
 PRODUCT_COPY_FILES += \

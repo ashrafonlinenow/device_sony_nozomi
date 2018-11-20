@@ -5,3 +5,17 @@ type nvimport_exec, exec_type, file_type;
 # Started by init
 init_daemon_domain(nvimport)
 
+set_prop(nvimport, hsdpa_cat_prop);
+
+allow nvimport diag_device:chr_file { open read write };
+allow nvimport etc_data_file:dir { getattr search write };
+allow nvimport etc_data_file:file { create getattr open write };
+allow nvimport init:unix_stream_socket connectto;
+allow nvimport nvimport_exec:file execmod;
+allow nvimport oncrpc_device:chr_file { open read write };
+allow nvimport property_socket:sock_file write;
+allow nvimport radio_device:chr_file { ioctl open read write };
+allow nvimport self:capability dac_override;
+allow nvimport shared_log_device:chr_file { ioctl open read write };
+allow nvimport sysfs_chargalg:file { getattr open write };
+allow nvimport system_file:file execmod;

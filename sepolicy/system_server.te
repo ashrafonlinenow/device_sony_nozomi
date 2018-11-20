@@ -1,0 +1,6 @@
+#allow system_server device:chr_file { ioctl open read write };
+allow system_server graphics_device:chr_file { ioctl open read };
+allow system_server oncrpc_device:chr_file { getattr open read write };
+allow system_server sensors_device:chr_file { ioctl open read write };
+allow system_server system_file:file execmod;
+

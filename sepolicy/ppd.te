@@ -5,3 +5,7 @@ type ppd_exec, exec_type, file_type;
 # Started by init
 init_daemon_domain(ppd)
 
+set_prop(ppd, system_prop);
+
+allow ppd ppd_exec:file execmod;
+allow ppd system_file:file execmod;

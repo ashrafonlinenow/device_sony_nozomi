@@ -5,3 +5,15 @@ type atfwd_exec, exec_type, file_type;
 # Started by init
 init_daemon_domain(atfwd)
 
+set_prop(atfwd, ctl_default_prop);
+
+allow atfwd atfwd_exec:file execmod;
+allow atfwd diag_device:chr_file { open read write };
+allow atfwd init:unix_stream_socket connectto;
+allow atfwd property_socket:sock_file write;
+allow atfwd qmux:unix_stream_socket connectto;
+allow atfwd qmuxd_socket:dir { add_name remove_name search write };
+allow atfwd qmuxd_socket:sock_file { create setattr unlink write };
+allow atfwd servicemanager:binder call;
+allow atfwd system_file:file execmod;
+

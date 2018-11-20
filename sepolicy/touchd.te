@@ -5,4 +5,10 @@ type touchd_exec, exec_type, file_type;
 # Started by init
 init_daemon_domain(touchd)
 
-
+allow touchd self:capability dac_override;
+allow touchd self:netlink_kobject_uevent_socket { bind create read };
+allow touchd sysfs:dir { open read };
+allow touchd sysfs:file { getattr open read write };
+allow touchd sysfs_touchd:file { getattr open write };
+allow touchd sysfs_wake_lock:file { open read write };
+allow touchd touchd_exec:file execmod;

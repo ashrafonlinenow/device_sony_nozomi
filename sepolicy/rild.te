@@ -1,0 +1,6 @@
+allow rild diag_device:chr_file { open read write };
+allow rild qmux:unix_stream_socket connectto;
+allow rild qmuxd_socket:dir { add_name write search };
+allow rild qmuxd_socket:sock_file { create setattr write };
+allow rild sysfs_wake_lock:file { getattr open write };
+allow rild system_file:file execmod;

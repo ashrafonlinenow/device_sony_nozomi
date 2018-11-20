@@ -13,5 +13,8 @@ type iddd_block_device, dev_type;
 type oncrpc_device, dev_type; 
 type tzcom_device, dev_type;
 
-#Superuser Embedded
+# Superuser Embedded
 type su_device, dev_type, mlstrustedobject;
+
+# adb device
+type adb_device, dev_type;

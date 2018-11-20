@@ -1,0 +1,5 @@
+# logpersist
+#type logpersist, domain;
+
+#allow logpersist cache_file:dir search;
+

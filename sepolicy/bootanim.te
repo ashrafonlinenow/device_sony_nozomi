@@ -1,0 +1,3 @@
+allow bootanim shell_data_file:dir search;
+allow bootanim sysfs_gpuclk:file { getattr open read };
+allow bootanim system_data_file:dir read;
